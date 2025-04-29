@@ -1,6 +1,7 @@
 
 import { ReactNode } from "react";
-import { SidebarProvider, Sidebar, SidebarInset, SidebarContent, SidebarRail } from "@/components/ui/sidebar";
+import { SidebarProvider, Sidebar, SidebarInset, SidebarContent, SidebarRail, SidebarTrigger } from "@/components/ui/sidebar";
+import { Menu } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -12,7 +13,14 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="flex min-h-screen w-full bg-background">
         <AppSidebar />
         <SidebarInset className="bg-background">
-          <div className="p-6 md:p-8 lg:p-12">{children}</div>
+          <div className="relative">
+            <div className="absolute top-4 left-4 z-10 md:hidden">
+              <SidebarTrigger>
+                <Menu size={24} />
+              </SidebarTrigger>
+            </div>
+            <div className="p-6 md:p-8 lg:p-12">{children}</div>
+          </div>
         </SidebarInset>
       </div>
     </SidebarProvider>
