@@ -15,7 +15,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Mobile menu toggle button */}
-      <button 
+      <button
         className="fixed top-4 left-4 z-50 p-2 bg-white rounded-md shadow-md md:hidden"
         onClick={toggleMobileMenu}
       >
@@ -36,12 +36,12 @@ const Sidebar = () => {
         <div className="flex flex-col items-center mb-6">
           <div className="relative w-16 h-16 rounded-full overflow-hidden mb-3 bg-gray-200">
             <img 
-              src={ProfileImage} 
+              src='https://www.istockphoto.com/'
               alt="Sparsh Sharma"
               className="w-full h-full object-cover"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = "https://via.placeholder.com/150";
+                target.src = "pic.png";
               }}
             />
           </div>

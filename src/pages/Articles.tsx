@@ -1,7 +1,9 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const Articles = () => {
+  const navigate = useNavigate();
+  
   const articles = [
     {
       id: "1",
@@ -46,7 +48,11 @@ const Articles = () => {
 
       <div className="grid gap-6">
         {articles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
+          <ArticleCard 
+            key={article.id} 
+            article={article} 
+            onClick={() => navigate(`/articles/${article.id}`)}
+          />
         ))}
       </div>
       
@@ -68,10 +74,14 @@ interface Article {
 
 interface ArticleCardProps {
   article: Article;
+  onClick: () => void;
 }
 
-const ArticleCard = ({ article }: ArticleCardProps) => (
-  <Card className="cursor-pointer hover:shadow-md transition-shadow duration-300">
+const ArticleCard = ({ article, onClick }: ArticleCardProps) => (
+  <Card 
+    className="cursor-pointer hover:shadow-md transition-shadow duration-300"
+    onClick={onClick}
+  >
     <CardHeader>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">

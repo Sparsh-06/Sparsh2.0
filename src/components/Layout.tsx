@@ -1,27 +1,34 @@
-
-import { ReactNode } from "react";
-import { SidebarProvider, Sidebar, SidebarInset, SidebarContent, SidebarRail, SidebarTrigger } from "@/components/ui/sidebar";
-import { Menu } from "lucide-react";
+import { ReactNode, useState, useEffect } from "react";
+import { SidebarProvider, Sidebar, SidebarInset, SidebarContent, SidebarRail, SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
+import { Menu, Home, User, Briefcase, FileText, Mail, Github, Linkedin, Twitter, Youtube, ChevronRight } from "lucide-react";
+import { NavLink as RouterNavLink } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
+const SIDEBAR_WIDTH = "16rem";
+
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <SidebarProvider defaultOpen={false}>
-      <div className="flex min-h-screen w-full bg-background">
-        <AppSidebar />
-        <SidebarInset className="bg-background">
-          <div className="relative">
-            <div className="absolute top-4 left-4 z-10 md:hidden">
-              <SidebarTrigger>
-                <Menu size={24} />
-              </SidebarTrigger>
+    <SidebarProvider defaultOpen={true}>
+      <div className="min-h-screen w-full bg-background flex">
+        <div className="fixed top-0 left-0 h-screen z-40" style={{ width: SIDEBAR_WIDTH }}>
+          <AppSidebar />
+        </div>
+        <div className="flex-1" style={{ marginLeft: SIDEBAR_WIDTH }}>
+          <SidebarInset className="bg-background">
+            <div className="relative">
+              <div className="absolute top-4 left-4 z-10 md:hidden">
+                <SidebarTrigger>
+                  <Menu size={24} />
+                </SidebarTrigger>
+              </div>
+              <div className="p-6 md:p-8 lg:p-12">{children}</div>
             </div>
-            <div className="p-6 md:p-8 lg:p-12">{children}</div>
-          </div>
-        </SidebarInset>
+          </SidebarInset>
+        </div>
       </div>
     </SidebarProvider>
   );
@@ -29,19 +36,35 @@ const Layout = ({ children }: LayoutProps) => {
 
 // Create a custom sidebar component that uses the shadcn/ui sidebar
 const AppSidebar = () => {
+  const [showHoverHint, setShowHoverHint] = useState(true);
+  const { state } = useSidebar();
+  
+  // Hide the hover hint after 5 seconds
+  useEffect(() => {
+    if (state === "collapsed") {
+      setShowHoverHint(true);
+      const timer = setTimeout(() => {
+        setShowHoverHint(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    } else {
+      setShowHoverHint(false);
+    }
+  }, [state]);
+  
   return (
-    <Sidebar side="left" variant="sidebar" collapsible="offcanvas">
+    <Sidebar side="left" variant="sidebar" collapsible="icon">
       <SidebarContent>
         <div className="flex flex-col h-full py-6">
           <div className="flex flex-col items-center mb-6">
             <div className="relative w-16 h-16 rounded-full overflow-hidden mb-3 bg-gray-200">
               <img 
-                src="/assets/profile.jpg" 
+                src="/pic.png" 
                 alt="Sparsh Sharma"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = "https://via.placeholder.com/150";
+                  target.src = "/placeholder.svg";
                 }}
               />
             </div>
@@ -71,15 +94,21 @@ const AppSidebar = () => {
         </div>
       </SidebarContent>
       <SidebarRail />
+      
+      {/* Hover hint animation - only show when sidebar is collapsed */}
+      {state === "collapsed" && showHoverHint && (
+        <div className="absolute top-1/2 right-0 transform translate-x-4 animate-fade-in-out z-50">
+          <div className="flex items-center bg-primary/10 text-primary px-3 py-1.5 rounded-full shadow-md">
+            <span className="text-xs font-medium mr-1">Click to open</span>
+            <ChevronRight size={14} className="animate-bounce" />
+          </div>
+        </div>
+      )}
     </Sidebar>
   );
 };
 
 // Helper components for navigation links
-import { NavLink as RouterNavLink } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { Home, User, Briefcase, FileText, Mail, Github, Linkedin, Twitter, Youtube } from "lucide-react";
-
 interface NavLinkProps {
   to: string;
   icon: JSX.Element;

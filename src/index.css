@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -118,4 +117,67 @@
            hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform 
            after:duration-300 after:ease-in-out;
   }
+}
+
+/* Sidebar hover animation */
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--primary), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(var(--primary), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--primary), 0);
+  }
+}
+
+[data-sidebar="rail"] {
+  position: relative;
+  z-index: 10;
+}
+
+[data-sidebar="rail"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  animation: pulse-border 2s infinite;
+  pointer-events: none;
+}
+
+/* Fade in animation for the hover hint */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-out {
+  animation: fadeInOut 5s ease-in-out forwards;
+}
+
+/* Ensure sidebar is visible */
+[data-sidebar="root"] {
+  z-index: 40;
+}
+
+[data-sidebar="content"] {
+  z-index: 30;
 }
