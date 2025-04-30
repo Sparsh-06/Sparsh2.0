@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Home, User, Briefcase, FileText, Mail, Github, Linkedin, Twitter, Youtube } from "lucide-react";
@@ -59,7 +58,7 @@ const Sidebar = () => {
           </ul>
         </nav>
 
-        <div className="mt-auto pt-6">
+        <div className="mt-auto pt-6 px-6">
           <p className="text-xs text-gray-500 mb-3 font-medium">Socials</p>
           <div className="flex gap-2">
             <SocialLink href="https://github.com/" icon={<Github size={16} />} />

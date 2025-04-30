@@ -8,25 +8,89 @@ const articles = [
     id: "1",
     title: "My Journey to Winning Vihaan 8.0 as a Solo Developer",
     content: `
-      <h2>The Beginning</h2>
-      <p>It all started with a simple idea - to create something that could make a difference. As a solo developer, I knew I had my work cut out for me, but I was determined to give it my all.</p>
-      
-      <h2>The Challenge</h2>
-      <p>Competing against 400+ talented developers was no small feat. Each team brought their unique perspectives and solutions to the table. The key was to stand out while delivering real value.</p>
-      
-      <h2>The Solution</h2>
-      <p>I decided to focus on building a full-stack solution that addressed a real-world problem. The application needed to be scalable, user-friendly, and innovative. I spent countless hours perfecting every aspect of the project.</p>
-      
-      <h2>The Result</h2>
-      <p>When the results were announced, I couldn't believe it - second place among 400+ contenders! This achievement validated my approach and showed that with dedication and the right strategy, anything is possible.</p>
-      
-      <h2>Key Takeaways</h2>
-      <ul>
-        <li>Focus on solving real problems</li>
-        <li>Pay attention to user experience</li>
-        <li>Don't be afraid to innovate</li>
-        <li>Perseverance pays off</li>
-      </ul>
+      <article id="vihaan-journey" style="max-width: 768px; margin: auto; padding: 1rem; font-family: 'Segoe UI', sans-serif; line-height: 1.7;">
+  <header style="margin-bottom: 2rem;">
+    <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">🚀 My Journey to Winning Vihaan 8.0 as a Solo Developer</h1>
+    <p style="color: gray; font-size: 0.9rem;"><strong>Event:</strong> Vihaan 8.0, organized by IEEE at DTU</p>
+  </header>
+
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">✈️ The Beginning</h2>
+    <p>
+      It all began with a simple yet powerful ambition—to build something meaningful that could make a real difference. Vihaan 8.0, organized by IEEE at DTU, was the perfect stage. As a solo developer, I was aware of the uphill battle I was signing up for. Most participants were working in teams, each bringing together diverse skill sets. I, on the other hand, had to wear all the hats—designer, developer, planner, and problem-solver.
+    </p>
+    <p>
+      But despite that, I saw this not as a challenge, but as an opportunity—a chance to push my limits, test my ideas, and see how far I could go on my own.
+    </p>
+  </section>
+
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">🧩 The Challenge</h2>
+    <p>
+      Vihaan 8.0 attracted more than <strong>400+ developers and innovators</strong> across India. The competition was fierce. Every project presented was unique—ranging from cutting-edge AI applications to community-based platforms and blockchain innovations.
+    </p>
+    <p>
+      What set the top teams apart wasn’t just tech skills—it was the <strong>ability to think deeply, solve a real-world problem</strong>, and deliver a working solution within a limited timeframe. I knew my best shot was to <strong>focus on purpose and execution</strong> rather than just features.
+    </p>
+  </section>
+
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">💡 The Idea & Solution</h2>
+    <p>
+      I started by identifying a real-world problem that I could solve with a full-stack application—something that would combine good design, seamless functionality, and real impact. After brainstorming multiple directions, I settled on a solution that tackled both utility and scalability.
+    </p>
+    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+      <li><strong>User-friendly:</strong> Clean UI/UX to ensure accessibility for all.</li>
+      <li><strong>Efficient:</strong> Optimized backend performance to handle scale.</li>
+      <li><strong>Innovative:</strong> Integrated tech in a way that simplified complexity.</li>
+    </ul>
+    <p>
+      I chose a <strong>modern stack</strong> that would support quick iteration without compromising quality. From the architecture to the smallest design details, everything was built from scratch—while ensuring <strong>clean code, reusable components, and modular APIs</strong>.
+    </p>
+    <p>
+      Throughout the sleepless nights, I stuck to three core principles:
+    </p>
+    <ol style="padding-left: 1.5rem;">
+      <li>Solve a real problem.</li>
+      <li>Build with clarity and intention.</li>
+      <li>Ensure the end-user is always the priority.</li>
+    </ol>
+  </section>
+
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">🏆 The Result</h2>
+    <p>
+      When the final results were announced, I was stunned. Out of <strong>400+ highly competitive participants</strong>, I secured the <strong>Second Position</strong>—as a <strong>solo developer</strong>. It was a moment of validation—not just of my technical abilities, but of the mindset I brought into the hackathon.
+    </p>
+    <p>
+      This wasn’t just about winning a trophy. It was about proving to myself and others that:
+    </p>
+    <ul style="padding-left: 1.5rem;">
+      <li>You don’t need a big team to create big impact.</li>
+      <li>Execution and clarity matter more than size or flashiness.</li>
+      <li>When your work aligns with real-world value, people notice.</li>
+    </ul>
+  </section>
+
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">✨ Key Takeaways</h2>
+    <ul style="padding-left: 1.5rem;">
+      <li><strong>Solve problems that matter:</strong> Don’t chase trends. Solve something real, even if it seems simple.</li>
+      <li><strong>User experience is everything:</strong> Great functionality fails without great usability.</li>
+      <li><strong>Innovation lies in simplicity:</strong> Sometimes, a small idea with clean execution beats complex systems.</li>
+      <li><strong>Being solo isn’t a limitation—it’s a mindset:</strong> Focused effort, discipline, and vision can outpace numbers.</li>
+      <li><strong>Perseverance is your secret weapon:</strong> Every moment of doubt or burnout is an opportunity to dig deeper.</li>
+    </ul>
+  </section>
+
+  <footer style="border-top: 1px solid #eee; padding-top: 1rem; color: #444;">
+    <p>
+      This experience has shaped my approach to problem-solving and product-building forever. I look forward to more challenges, more sleepless builds, and many more stories to tell.
+    </p>
+  </footer>
+</article>
+
+
     `,
     date: "April 15, 2025",
     readTime: "8 min read",

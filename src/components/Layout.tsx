@@ -82,7 +82,7 @@ const AppSidebar = () => {
             </ul>
           </nav>
 
-          <div className="mt-auto pt-6">
+          <div className="mt-auto pt-6 px-6">
             <p className="text-xs text-gray-500 mb-3 font-medium">Socials</p>
             <div className="flex gap-2">
               <SocialIcon href="https://github.com/" icon={<Github size={16} />} />

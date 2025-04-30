@@ -42,11 +42,11 @@ const Home = () => {
             I'm a full-stack developer that loves building products and web apps that can impact millions of lives.
           </p>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
-            I'm a senior software engineer with 7 years of experience building scalable web apps that are performance optimized and good looking.
+            I'm a junior software engineer with almost 2 years of experience building scalable web apps that are performance optimized and socially impactable.
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Button asChild>
-              <a href="/resume.pdf" download>
+              <a href="https://drive.google.com/file/d/1sZif0_m6jT8MgzDoW77z7oSoKi19wYeS/view?usp=sharing" target="_blank">
                 Download Resume
               </a>
             </Button>
@@ -90,18 +90,18 @@ const Home = () => {
           <HackathonItem 
             title="Vihaan 8.0 - IEEE DTU" 
             position="2nd Position, Software Domain" 
-            description="Secured 2nd position as a solo participant among 400+ contenders in DTU's flagship hackathon."
-            date="March 2025"
+            description="Secured 2nd position as a solo! participant among 500+ contenders in DTU's flagship hackathon."
+            date="April 2025"
           />
           <HackathonItem 
             title="AceHack 4.0 - Jaipur" 
-            position="Top 17 Finalist" 
-            description="Finalist in the Top 17 solo entries out of 750+ individuals across India."
+            position="Top 17th Finalist" 
+            description="Finalist in the Top 17 solo! out of 750+ individuals across India."
             date="February 2025"
           />
           <HackathonItem 
             title="Neo X Grind Hackathon - Rise In Edition" 
-            position="Runner-Up" 
+            position="Participant" 
             description="Built the world's first blockchain-powered college application preparation platform."
             date="December 2024"
           />

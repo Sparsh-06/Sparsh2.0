@@ -61,15 +61,15 @@ const Contact = () => {
   const socials = [
     { 
       name: "GitHub", 
-      url: "https://github.com/", 
+      url: "https://github.com/Sparsh-06", 
       icon: <Github className="h-5 w-5" />,
-      username: "@sparsharma" 
+      username: "@Sparsh-06" 
     },
     { 
       name: "LinkedIn", 
-      url: "https://linkedin.com/in/", 
+      url: "https://linkedin.com/in/sparshdev", 
       icon: <Linkedin className="h-5 w-5" />,
-      username: "@sparsh-sharma" 
+      username: "@sparshdev" 
     },
     { 
       name: "Twitter", 
@@ -77,12 +77,6 @@ const Contact = () => {
       icon: <Twitter className="h-5 w-5" />,
       username: "@sparshsharma" 
     },
-    { 
-      name: "YouTube", 
-      url: "https://youtube.com/@", 
-      icon: <Youtube className="h-5 w-5" />,
-      username: "@sparshsharma" 
-    }
   ];
 
   return (
@@ -164,8 +158,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:contact@sparsharma.com" className="font-medium animated-link">
-                      contact@sparsharma.com
+                    <a href="mailto:sparshsharmadav@gmail.com" className="font-medium animated-link">
+                      sparshsharmadav@gmail.com
                     </a>
                   </div>
                 </div>
