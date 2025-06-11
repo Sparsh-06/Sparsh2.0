@@ -1,7 +1,7 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // Sample projects to display on the home page
@@ -46,14 +46,14 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Button asChild>
-              <a href="https://drive.google.com/file/d/1sZif0_m6jT8MgzDoW77z7oSoKi19wYeS/view?usp=sharing" target="_blank">
+              <a href="https://drive.google.com/file/d/1sZif0_m6jT8MgzDoW77z7oSoKi19wYeS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Download Resume
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href="/contact">
+              <Link to="/contact">
                 Get in touch
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -64,9 +64,9 @@ const Home = () => {
         <div className="flex items-center justify-between mb-6">
           <h2 className="section-heading">Featured Projects</h2>
           <Button variant="ghost" asChild>
-            <a href="/projects" className="flex items-center gap-1 text-sm">
+            <Link to="/projects" className="flex items-center gap-1 text-sm">
               View all <ArrowRight size={16} />
-            </a>
+            </Link>
           </Button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -81,9 +81,9 @@ const Home = () => {
         <div className="flex items-center justify-between mb-6">
           <h2 className="section-heading">Hackathon Achievements</h2>
           <Button variant="ghost" asChild>
-            <a href="/about" className="flex items-center gap-1 text-sm">
+            <Link to="/about" className="flex items-center gap-1 text-sm">
               Learn more <ArrowRight size={16} />
-            </a>
+            </Link>
           </Button>
         </div>
         <div className="space-y-4">
