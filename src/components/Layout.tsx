@@ -57,10 +57,10 @@ const MobileNav = () => {
           <div className="border-t border-gray-200 dark:border-gray-700 mt-2 pt-2 px-4">
             <p className="text-xs text-gray-500 mb-2 font-medium">Socials</p>
             <div className="flex gap-2">
-              <SocialIcon href="https://github.com/" icon={<Github size={16} />} />
-              <SocialIcon href="https://linkedin.com/" icon={<Linkedin size={16} />} />
-              <SocialIcon href="https://twitter.com/" icon={<Twitter size={16} />} />
-              <SocialIcon href="https://youtube.com/" icon={<Youtube size={16} />} />
+              <SocialIcon href="https://github.com/Sparsh-06" icon={<Github size={16} />} />
+              <SocialIcon href="https://linkedin.com/in/sparshdev" icon={<Linkedin size={16} />} />
+              <SocialIcon href="https://twitter.com/pvtsparsshh" icon={<Twitter size={16} />} />
+              <SocialIcon href="https://youtube.com/@itssparshiii" icon={<Youtube size={16} />} />
             </div>
           </div>
         </div>
@@ -127,10 +127,10 @@ const DesktopSidebar = () => {
         <div className="mt-auto pt-6 px-6">
           <p className="text-xs text-gray-500 mb-3 font-medium">Socials</p>
           <div className="flex gap-2">
-            <SocialIcon href="https://github.com/" icon={<Github size={16} />} />
-            <SocialIcon href="https://linkedin.com/" icon={<Linkedin size={16} />} />
-            <SocialIcon href="https://twitter.com/" icon={<Twitter size={16} />} />
-            <SocialIcon href="https://youtube.com/" icon={<Youtube size={16} />} />
+            <SocialIcon href="https://github.com/Sparsh-06" icon={<Github size={16} />} />
+            <SocialIcon href="https://linkedin.com/in/sparshdev" icon={<Linkedin size={16} />} />
+            <SocialIcon href="https://twitter.com/pvtsparsshh" icon={<Twitter size={16} />} />
+            <SocialIcon href="https://youtube.com/@itssparshiii" icon={<Youtube size={16} />} />
           </div>
         </div>
       </div>
