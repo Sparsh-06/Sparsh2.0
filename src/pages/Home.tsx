@@ -46,7 +46,7 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Button asChild>
-              <a href="https://drive.google.com/file/d/1sZif0_m6jT8MgzDoW77z7oSoKi19wYeS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1JoC23s1--ov4DbxJmcLv2uwn_RwtspAq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 Download Resume
               </a>
             </Button>
